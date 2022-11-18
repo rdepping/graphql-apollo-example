@@ -1,5 +1,6 @@
 REPOSITORY := openpolicyagent/demo-graphql-api
 VERSION := 0.1
+POLICY ?= example.rego
 
 .PHONY: all
 all: image
@@ -20,5 +21,9 @@ push: build
 
 .PHONY: up
 up:
-	opa build docker/policy/example.rego
+	opa build docker/policy/$(POLICY)
 	docker compose -f docker/docker-compose.yaml up
+
+.PHONY: down
+down:
+	docker compose -f docker/docker-compose.yaml down
