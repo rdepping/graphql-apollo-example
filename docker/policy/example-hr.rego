@@ -10,6 +10,3 @@ allowed_query(q) {
 hr = [
   "david",
 ]
-
-# Ensure we're dealing with a selection set that includes the "salary" field.
-selected_salary(value) := value.SelectionSet[_].Name == "salary"

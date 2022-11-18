@@ -33,11 +33,12 @@ For convenience, we included a docker-compose file, so you'll want
 
 Note that if using Docker Desktop, you may instead use the `docker compose` command.
 
-To build the containers and get them started, use the following make commands.
+To build the containers, get them started and stop them use the following make commands.
 
 ```
-make       # build the containers with docker
-make up    # start the containers with docker-compose
+make        # build the containers with docker
+make up     # start the containers with docker-compose
+make down   # stop the containers with docker-compose
 ```
 
 To instead use the example with JSON Web Tokens, use the following make commands.
